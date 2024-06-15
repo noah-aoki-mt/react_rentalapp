@@ -9,6 +9,6 @@ const Title = () => {
             <a href="#">一覧に戻る</a>
         </div>
     );
-}
+} 
 
 export default Title

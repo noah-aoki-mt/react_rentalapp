@@ -6,7 +6,7 @@ const SideList = (props) => {
       return null; // エラー処理や何も表示しない場合の処理
     }
   
-    return (
+    return ( 
       <div>
         {props.lists.map((list) => (
             <li><a href="#">{list}</a></li>

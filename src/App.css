@@ -37,7 +37,7 @@
   justify-content: center;
   font-size: calc(6px + 2vmin);
 }
-
+  
 .App-sidebar{
   background-color: #c8deff;
   min-height: 10vh;
