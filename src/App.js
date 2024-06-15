@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import Title from './Title';
+import SideList from './SideList';
+import Add from './Add';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const lists = ["書籍一覧", "在庫一覧", "在庫カレンダー", "貸出一覧"];
+  const handleAdd = () => { }
   return (
-    <div className="App">
+    <>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Title />
       </header>
-    </div>
+      <div className='App-sidebar'>
+        <SideList lists={lists} />
+      </div>
+      <div className='App-body'>
+        <Add />
+        <p>
+        <button onClick={handleAdd}>保存</button>
+        </p>
+      </div>
+    </>
   );
 }
 
 export default App;
+
