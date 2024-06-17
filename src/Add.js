@@ -17,11 +17,12 @@ const Add = () => {
     const handleCountUp = () => {
         setNum(prevState => prevState + 1)
     }
+
     const handleCountDown = () => {
-        if (num > 0) {
+        if (num > 1) {
             setNum(prevState => prevState - 1)
         } else {
-            alert('0以下は入力できません')
+            alert('貸出書籍がない場合は入力できません')
         }
     }
 
@@ -36,10 +37,10 @@ const Add = () => {
 
     const handleReturnAt = (event) => {
         const selectedDate = new Date(event.target.value);
-        if (selectedDate >= new Date(rentalAt)) {
+        if (selectedDate > new Date(rentalAt)) {
             setReturnAt(event.target.value)
         } else {
-            alert('貸出日より過去の日付けは入力できません')
+            alert('貸出日と同日または過去の日付けは入力できません')
         }
     }
 
